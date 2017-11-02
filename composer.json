@@ -1,0 +1,63 @@
+{
+  "name": "yuncms/yuncms-admin",
+  "description": "The admin module for the yuncms.",
+  "keywords": [
+    "yii",
+    "yii2",
+    "yii2-extension",
+    "yuncms",
+    "admin"
+  ],
+  "type": "yii2-extension",
+  "license": "MIT",
+  "require": {
+    "php": ">=5.4.0",
+    "yiisoft/yii2": "~2.0.6",
+    "yiisoft/yii2-queue": "~2.0.0",
+    "yii2tech/ar-position": "~1.0",
+    "xutl/yii2-inspinia-widget": "~1.0",
+    "xutl/yii2-fontawesome-asset": "~2.0.0"
+  },
+  "require-dev": {
+    "yiisoft/yii2-debug": "~2.0.0",
+    "yiisoft/yii2-gii": "~2.0.0",
+    "yiisoft/yii2-faker": "~2.0.0",
+    "codeception/base": "^2.2.3",
+    "codeception/verify": "~0.3.1",
+    "codeception/specify": "~0.4.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "yuncms\\admin\\": ""
+    }
+  },
+  "extra": {
+    "yuncms": {
+      "name": "admin",
+      "i18n": {
+        "class": "yii\\i18n\\PhpMessageSource",
+        "sourceLanguage": "en-US",
+        "basePath": "@yuncms/admin/messages"
+      },
+      "cron": {
+      },
+      "migrationNamespace": "yuncms\\admin\\migrations",
+      "backend": {
+        "class": "yuncms\\admin\\Module"
+      }
+    },
+    "branch-alias": {
+      "dev-master": "2.0-dev"
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    },
+    {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    }
+  ]
+}
