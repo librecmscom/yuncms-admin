@@ -14,7 +14,7 @@ class M170123113918Create_admin_login_history_table extends Migration
             $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
         }
         $this->createTable('{{%admin_login_history}}', [
-            'id' => $this->primaryKey(11),
+            'id' => $this->primaryKey(11)->unsigned(),
             'user_id' => $this->integer()->unsigned()->notNull(),
             'ip' => $this->string()->notNull(),
             'created_at' => $this->integer()->unsigned()->notNull()
