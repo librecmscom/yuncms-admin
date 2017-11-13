@@ -4,11 +4,11 @@
  * @copyright Copyright (c) 2012 TintSoft Technology Co. Ltd.
  * @license http://www.tintsoft.com/license/
  */
+
 namespace yuncms\admin\models;
 
 use Yii;
 use yii\base\Model;
-use yuncms\user\models\User;
 
 /**
  * Login form
@@ -39,7 +39,7 @@ class LoginForm extends Model
 
     /**
      * 用户组件
-     * @var User
+     * @var Admin
      */
     private $_user;
 
@@ -98,7 +98,7 @@ class LoginForm extends Model
     /**
      * Finds user by [[username]] or [[email]]
      *
-     * @return User|null
+     * @return Admin|null
      */
     protected function getUser()
     {

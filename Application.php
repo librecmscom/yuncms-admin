@@ -4,13 +4,16 @@
  * @copyright Copyright (c) 2012 TintSoft Technology Co. Ltd.
  * @license http://www.tintsoft.com/license/
  */
+
 namespace yuncms\admin;
 
 use Yii;
 
 /**
  * Class Application
- * @package yuncms\admin
+ *
+ * @property \yii\web\UrlManager $frontUrlManager
+ * @package  yuncms\admin
  */
 class Application extends \yii\web\Application
 {
@@ -28,6 +31,9 @@ class Application extends \yii\web\Application
 
         //锁定布局
         $this->layout = '@vendor/xutl/yii2-inspinia-widget/views/layouts/main';
+
+        //设置前台URL
+        $this->frontUrlManager->baseUrl = Yii::$app->settings->get('url', 'system');
     }
 
     /**

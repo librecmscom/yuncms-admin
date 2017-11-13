@@ -95,6 +95,10 @@ class AdminController extends Controller
      */
     public function actionDelete($id)
     {
+        if (Admin::find()->count() == 1) {
+            Yii::$app->getSession()->setFlash('success', Yii::t('admin', 'This is the last administrator, delete can not manage the system, it can not be deleted!'));
+            return $this->redirect(['index']);
+        }
         $this->findModel($id)->delete();
         Yii::$app->getSession()->setFlash('success', Yii::t('admin', 'Delete success.'));
         return $this->redirect(['index']);
