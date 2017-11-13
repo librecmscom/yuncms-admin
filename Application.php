@@ -46,10 +46,6 @@ class Application extends \yii\web\Application
     {
         //增加或重置一些系统默认组件的默认配置
         return array_merge(parent::coreComponents(), [
-            'request' => [
-                'class' => 'yii\web\Request',
-                'csrfParam' => '_csrf_backend',
-            ],
             'user' => [
                 'class' => 'yii\web\User',
                 'enableAutoLogin' => true,
