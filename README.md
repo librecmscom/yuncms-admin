@@ -3,7 +3,6 @@
 
 [![Latest Stable Version](https://poser.pugx.org/yuncms/yuncms-admin/v/stable.png)](https://packagist.org/packages/yuncms/yuncms-admin)
 [![Total Downloads](https://poser.pugx.org/yuncms/yuncms-admin/downloads.png)](https://packagist.org/packages/yuncms/yuncms-admin)
-[![Reference Status](https://www.versioneye.com/php/yuncms:yuncms-admin/reference_badge.svg)](https://www.versioneye.com/php/yuncms:yuncms-admin/references)
 [![Build Status](https://img.shields.io/travis/yuncms/yuncms-admin.svg)](http://travis-ci.org/yuncms/yuncms-admin)
 [![Dependency Status](https://www.versioneye.com/php/yuncms:yuncms-admin/dev-master/badge.png)](https://www.versioneye.com/php/yuncms:yuncms-admin/dev-master)
 [![License](https://poser.pugx.org/yuncms/yuncms-admin/license.svg)](https://packagist.org/packages/yuncms/yuncms-admin)
