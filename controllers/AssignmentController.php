@@ -129,7 +129,7 @@ class AssignmentController extends Controller
         if (($user = $class::findIdentity($id)) !== null) {
             return new AdminAssignment($id, $user);
         } else {
-            throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
+            throw new NotFoundHttpException(Yii::t('yii', 'The requested page does not exist.'));
         }
     }
 }

@@ -4,10 +4,12 @@ namespace yuncms\admin\migrations;
 
 use yii\db\Migration;
 
-class M131219085941Create_admin_menu_table extends Migration
+class M171113043435Create_admin_menu_table extends Migration
 {
-    public function up()
+
+    public function safeUp()
     {
+
         $tableOptions = null;
         if ($this->db->driverName === 'mysql') {
             // http://stackoverflow.com/questions/766809/whats-the-difference-between-utf8-general-ci-and-utf8-unicode-ci
@@ -15,18 +17,17 @@ class M131219085941Create_admin_menu_table extends Migration
         }
 
         $this->createTable('{{%admin_menu}}', [
-            'id' => $this->primaryKey(),
-            'name' => $this->string(128)->notNull(),
-            'parent' => $this->integer(),
-            'route' => $this->string(),
-            'icon' => $this->string(30),
-            'visible' => $this->boolean()->defaultValue(true),
+            'id' => $this->primaryKey()->unsigned()->comment('ID'),
+            'name' => $this->string(128)->notNull()->comment('Name'),
+            'parent' => $this->integer()->unsigned()->comment('Parent'),
+            'route' => $this->string()->comment('Route'),
+            'icon' => $this->string(30)->comment('Icon'),
+            'visible' => $this->boolean()->defaultValue(true)->comment('Visible'),
             //排序
-            'sort' => $this->smallInteger()->defaultValue(99),
-            'data' => $this->text()
+            'sort' => $this->smallInteger()->defaultValue(99)->comment('Sort'),
+            'data' => $this->text()->comment('Data')
         ], $tableOptions);
-        $this->addForeignKey('{{%admin_menu_ibfk_1}}', '{{%admin_menu}}', 'parent', '{{%admin_menu}}', 'id', 'SET NULL', 'CASCADE');
-
+        $this->addForeignKey('{{%admin_menu_fk_1}}', '{{%admin_menu}}', 'parent', '{{%admin_menu}}', 'id', 'SET NULL', 'CASCADE');
 
         $this->batchInsert('{{%admin_menu}}', ['id', 'name', 'parent', 'route', 'icon', 'sort', 'data'], [
             //一级主菜单
@@ -50,8 +51,8 @@ class M131219085941Create_admin_menu_table extends Migration
             [28, '菜单管理', 2, '/admin/menu/index', 'fa-wrench', 7, NULL],
             //[30, '附件设置', 2, '/attachment/attachment/setting', 'fa-cog', 8, NULL],
 
-           // [40, '地区管理', 3, '/area/index', 'fa-globe', 1, NULL],
-            [43, '敏感词管理', 3, '/admin/ban-word/index', 'fa-exclamation-triangle', 2, NULL],
+            // [40, '地区管理', 3, '/area/index', 'fa-globe', 1, NULL],
+            //[43, '敏感词管理', 3, '/admin/ban-word/index', 'fa-exclamation-triangle', 2, NULL],
         ]);
 
         //隐藏的子菜单[隐藏的子菜单不设置id字段，使用自增]//从10000开始
@@ -66,23 +67,28 @@ class M131219085941Create_admin_menu_table extends Migration
             ['规则查看', 27, '/admin/rule/view', 0, NULL], ['创建规则', 27, '/admin/rule/create', 0, NULL], ['更新规则', 27, '/admin/rule/update', 0, NULL],
             ['菜单查看', 28, '/admin/menu/view', 0, NULL], ['创建菜单', 28, '/admin/menu/create', 0, NULL], ['更新菜单', 28, '/admin/menu/update', 0, NULL],
             //['创建地区', 40, '/area/create', 0, NULL], ['更新地区', 40, '/area/update', 0, NULL],
-            ['敏感词查看', 43, '/admin/ban-word/view', 0, NULL], ['创建敏感词', 43, '/admin/ban-word/create', 0, NULL], ['更新敏感词', 43, '/admin/ban-word/update', 0, NULL],
+            //['敏感词查看', 43, '/admin/ban-word/view', 0, NULL], ['创建敏感词', 43, '/admin/ban-word/create', 0, NULL], ['更新敏感词', 43, '/admin/ban-word/update', 0, NULL],
         ]);
-    }
-
-    public function down()
-    {
-        $this->dropTable('{{%admin_menu}}');
-    }
-
-    /*
-    // Use safeUp/safeDown to run migration code within a transaction
-    public function safeUp()
-    {
     }
 
     public function safeDown()
     {
+        $this->dropTable('{{%admin_menu}}');
+    }
+
+
+    /*
+    // Use up()/down() to run migration code without a transaction.
+    public function up()
+    {
+
+    }
+
+    public function down()
+    {
+        echo "M171113043435Create_admin_menu_table cannot be reverted.\n";
+
+        return false;
     }
     */
 }

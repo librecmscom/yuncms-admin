@@ -4,7 +4,7 @@ namespace yuncms\admin\migrations;
 
 use yii\db\Migration;
 
-class M130111071454Create_admin_table extends Migration
+class M171113043317Create_admin_table extends Migration
 {
 
     public function safeUp()
@@ -21,6 +21,7 @@ class M130111071454Create_admin_table extends Migration
             'mobile' => $this->string(11)->notNull()->unique()->comment('Mobile'),
             'auth_key' => $this->string(32)->notNull()->comment('Auth Key'),
             'password_hash' => $this->string()->notNull()->comment('Password Hash'),
+            'access_token' => $this->string()->unique()->comment('Access Token'),
             'status' => $this->boolean()->defaultValue(true)->comment('Status'),
             'last_login_at' => $this->integer(10)->unsigned()->comment('Last Login At'),
             'created_at' => $this->integer(10)->notNull()->unsigned()->comment('Created At'),
@@ -57,7 +58,7 @@ class M130111071454Create_admin_table extends Migration
 
     public function down()
     {
-        echo "M171011071454Create_admin_table cannot be reverted.\n";
+        echo "M171113043317Create_admin_table cannot be reverted.\n";
 
         return false;
     }

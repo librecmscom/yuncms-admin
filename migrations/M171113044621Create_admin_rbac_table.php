@@ -4,9 +4,10 @@ namespace yuncms\admin\migrations;
 
 use yii\db\Migration;
 
-class M170123113843Create_admin_rbac_table extends Migration
+class M171113044621Create_admin_rbac_table extends Migration
 {
-    public function up()
+
+    public function safeUp()
     {
         $tableOptions = null;
         if ($this->db->driverName === 'mysql') {
@@ -72,7 +73,7 @@ class M170123113843Create_admin_rbac_table extends Migration
         $this->insert('{{%admin_auth_assignment}}', ['item_name' => 'Super Administrator', 'user_id' => 1, 'created_at' => time()]);
     }
 
-    public function down()
+    public function safeDown()
     {
         $this->dropTable('{{%admin_auth_assignment}}');
         $this->dropTable('{{%admin_auth_item_child}}');
@@ -80,14 +81,19 @@ class M170123113843Create_admin_rbac_table extends Migration
         $this->dropTable('{{%admin_auth_rule}}');
     }
 
+
     /*
-    // Use safeUp/safeDown to run migration code within a transaction
-    public function safeUp()
+    // Use up()/down() to run migration code without a transaction.
+    public function up()
     {
+
     }
 
-    public function safeDown()
+    public function down()
     {
+        echo "M171113044621Create_admin_rbac_table cannot be reverted.\n";
+
+        return false;
     }
     */
 }
