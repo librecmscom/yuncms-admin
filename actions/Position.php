@@ -35,6 +35,8 @@ class Position extends Action
      * @return mixed response.
      * @throws BadRequestHttpException on invalid request.
      * @throws MethodNotAllowedHttpException on invalid request.
+     * @throws \yii\base\InvalidConfigException
+     * @throws \yii\web\NotFoundHttpException
      */
     public function run($id)
     {

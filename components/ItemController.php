@@ -56,6 +56,7 @@ class ItemController extends Controller
      * Displays a single AuthItem model.
      * @param string $id
      * @return mixed
+     * @throws NotFoundHttpException
      */
     public function actionView($id)
     {
@@ -86,6 +87,7 @@ class ItemController extends Controller
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param string $id
      * @return mixed
+     * @throws NotFoundHttpException
      */
     public function actionUpdate($id)
     {
@@ -102,6 +104,7 @@ class ItemController extends Controller
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param string $id
      * @return mixed
+     * @throws NotFoundHttpException
      */
     public function actionDelete($id)
     {
@@ -116,6 +119,7 @@ class ItemController extends Controller
      * Assign items
      * @param string $id
      * @return array
+     * @throws NotFoundHttpException
      */
     public function actionAssign($id)
     {
@@ -130,6 +134,7 @@ class ItemController extends Controller
      * Assign or remove items
      * @param string $id
      * @return array
+     * @throws NotFoundHttpException
      */
     public function actionRemove($id)
     {
@@ -150,6 +155,7 @@ class ItemController extends Controller
 
     /**
      * Label use in view
+     * @throws NotSupportedException
      */
     public function labels()
     {
@@ -158,7 +164,7 @@ class ItemController extends Controller
 
     /**
      * Type of Auth Item.
-     * @return integer
+     * @return void
      */
     public function getType()
     {

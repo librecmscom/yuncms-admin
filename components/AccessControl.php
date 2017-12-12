@@ -48,6 +48,7 @@ class AccessControl extends ActionFilter
     /**
      * Get user
      * @return User
+     * @throws \yii\base\InvalidConfigException
      */
     public function getUser()
     {

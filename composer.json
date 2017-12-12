@@ -30,8 +30,8 @@
   },
   "extra": {
     "yuncms": {
-      "name": "admin",
-      "i18n": {
+      "id": "admin",
+      "translate": {
         "class": "yii\\i18n\\PhpMessageSource",
         "sourceLanguage": "en-US",
         "basePath": "@yuncms/admin/messages"

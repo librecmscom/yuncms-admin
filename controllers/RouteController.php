@@ -85,7 +85,7 @@ class RouteController extends Controller
 
     /**
      * Refresh cache
-     * @return type
+     * @return array
      */
     public function actionRefresh()
     {

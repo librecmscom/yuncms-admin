@@ -27,7 +27,7 @@ class AdminRoute extends Object
     /**
      * Assign or remove items
      * @param array $routes
-     * @return array
+     * @return void
      */
     public function addNew($routes)
     {
@@ -64,7 +64,7 @@ class AdminRoute extends Object
     /**
      * Assign or remove items
      * @param array $routes
-     * @return array
+     * @return void
      */
     public function remove($routes)
     {

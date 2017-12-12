@@ -146,9 +146,11 @@ class TreeGrid extends Widget
      * @see \yii\grid::$columns for details.
      */
     public $columns = [];
+
     /**
      * Initializes the grid view.
      * This method will initialize required property values and instantiate [[columns]] objects.
+     * @throws InvalidConfigException
      */
     public function init()
     {
@@ -330,6 +332,7 @@ class TreeGrid extends Widget
 
     /**
      * Creates column objects and initializes them.
+     * @throws InvalidConfigException
      */
     protected function initColumns()
     {

@@ -132,6 +132,7 @@ class AdminAuthItem extends Model
     /**
      * Save role to [[\yii\rbac\authManager]]
      * @return boolean
+     * @throws \Exception
      */
     public function save()
     {

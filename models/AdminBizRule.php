@@ -120,6 +120,7 @@ class AdminBizRule extends Model
     /**
      * Save model to authManager
      * @return boolean
+     * @throws \Exception
      */
     public function save()
     {
@@ -149,7 +150,7 @@ class AdminBizRule extends Model
 
     /**
      * Get item
-     * @return Item
+     * @return Rule
      */
     public function getItem()
     {
