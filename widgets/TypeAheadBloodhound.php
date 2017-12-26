@@ -6,7 +6,7 @@
  */
 namespace yuncms\admin\widgets;
 
-use yii\base\Object;
+use yii\base\BaseObject;
 use yii\helpers\Json;
 use yii\web\JsExpression;
 use yii\base\InvalidConfigException;
@@ -16,7 +16,7 @@ use yii\base\InvalidConfigException;
  * Bloodhound is a helper class to configure Bloodhound suggestion engines.
  * @package Leaps\Typeahead
  */
-class TypeAheadBloodhound extends Object
+class TypeAheadBloodhound extends BaseObject
 {
     /**
      * @var string the engine js name

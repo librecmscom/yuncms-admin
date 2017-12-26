@@ -71,7 +71,6 @@ class Action extends \yii\base\Action
      * The order of the primary key values should follow that returned by the `primaryKey()` method
      * of the model.
      * @return ActiveRecordInterface|Model the model found
-     * @throws NotFoundHttpException if the model cannot be found
      * @throws InvalidConfigException on invalid configuration
      */
     public function findModel($id)

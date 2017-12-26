@@ -38,7 +38,7 @@ class Application extends \yii\web\Application
 
     /**
      * Returns the URL manager for this application.
-     * @return \yii\web\UrlManager the URL manager for this application.
+     * @return object|\yii\web\UrlManager
      */
     public function getFrontUrlManager()
     {

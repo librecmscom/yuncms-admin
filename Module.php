@@ -6,6 +6,10 @@
  */
 namespace yuncms\admin;
 
+/**
+ * Class Module
+ * @package yuncms\admin
+ */
 class Module extends \yii\base\Module
 {
 

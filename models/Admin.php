@@ -3,7 +3,6 @@
 namespace yuncms\admin\models;
 
 use Yii;
-use yii\base\NotSupportedException;
 use yii\db\ActiveRecord;
 use yii\helpers\ArrayHelper;
 use yii\behaviors\TimestampBehavior;

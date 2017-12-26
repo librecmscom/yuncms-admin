@@ -7,7 +7,7 @@
 namespace yuncms\admin\models;
 
 use Yii;
-use yii\base\Object;
+use yii\base\BaseObject;
 use yuncms\admin\components\Helper;
 
 /**
@@ -16,7 +16,7 @@ use yuncms\admin\components\Helper;
  * @author Misbahul D Munir <misbahuldmunir@gmail.com>
  * @since 2.5
  */
-class AdminAssignment extends Object
+class AdminAssignment extends BaseObject
 {
     /**
      * @var integer User id

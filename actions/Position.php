@@ -36,7 +36,6 @@ class Position extends Action
      * @throws BadRequestHttpException on invalid request.
      * @throws MethodNotAllowedHttpException on invalid request.
      * @throws \yii\base\InvalidConfigException
-     * @throws \yii\web\NotFoundHttpException
      */
     public function run($id)
     {

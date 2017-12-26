@@ -64,6 +64,7 @@ class RuleController extends Controller
      * Creates a new AuthItem model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
+     * @throws \Exception
      */
     public function actionCreate()
     {
@@ -83,6 +84,7 @@ class RuleController extends Controller
      * @param string $id
      * @return mixed
      * @throws NotFoundHttpException
+     * @throws \Exception
      */
     public function actionUpdate($id)
     {

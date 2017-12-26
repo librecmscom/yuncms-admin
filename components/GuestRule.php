@@ -4,8 +4,10 @@
  * @copyright Copyright (c) 2012 TintSoft Technology Co. Ltd.
  * @license http://www.tintsoft.com/license/
  */
+
 namespace yuncms\admin\components;
 
+use Yii;
 use yii\rbac\Item;
 use yii\rbac\Rule;
 
@@ -31,6 +33,6 @@ class GuestRule extends Rule
      */
     public function execute($user, $item, $params)
     {
-        return $user->isGuest;
+        return Yii::$app->user->isGuest;
     }
 }

@@ -8,7 +8,7 @@ namespace yuncms\admin\models;
 
 use Yii;
 use Exception;
-use yii\base\Object;
+use yii\base\BaseObject;
 use yii\helpers\VarDumper;
 use yii\caching\TagDependency;
 use yuncms\admin\components\Helper;
@@ -20,7 +20,7 @@ use yuncms\admin\components\RouteRule;
  * @author Misbahul D Munir <misbahuldmunir@gmail.com>
  * @since 1.0
  */
-class AdminRoute extends Object
+class AdminRoute extends BaseObject
 {
     const CACHE_TAG = 'admin.route';
 
@@ -259,6 +259,7 @@ class AdminRoute extends Object
 
     /**
      * Set default rule of parameterize route.
+     * @throws Exception
      */
     protected function setDefaultRule()
     {

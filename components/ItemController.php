@@ -17,6 +17,7 @@ use yuncms\admin\models\AdminAuthItemSearch;
 
 /**
  * Class ItemController
+ * @property integer $type
  */
 class ItemController extends Controller
 {
@@ -69,6 +70,7 @@ class ItemController extends Controller
      * Creates a new AuthItem model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
+     * @throws \Exception
      */
     public function actionCreate()
     {
@@ -88,6 +90,7 @@ class ItemController extends Controller
      * @param string $id
      * @return mixed
      * @throws NotFoundHttpException
+     * @throws \Exception
      */
     public function actionUpdate($id)
     {
