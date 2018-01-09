@@ -40,9 +40,12 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="hr-line-dashed"></div>
             <?= $form->field($model, 'closeReason')->textarea() ?>
             <div class="hr-line-dashed"></div>
+            <?= $form->field($model, 'icpBeian')->textarea() ?>
+            <div class="hr-line-dashed"></div>
+            <?= $form->field($model, 'beian')->textarea() ?>
+            <div class="hr-line-dashed"></div>
             <?= $form->field($model, 'analysisCode')->textarea() ?>
             <div class="hr-line-dashed"></div>
-
             <div class="form-group">
                 <div class="col-sm-4 col-sm-offset-2">
                     <?= Html::submitButton(Yii::t('admin', 'Save'), ['class' => 'btn btn-primary']) ?>

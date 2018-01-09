@@ -62,6 +62,16 @@ class Settings extends Model
     public $analysisCode;
 
     /**
+     * @var string
+     */
+    public $icpBeian;
+
+    /**
+     * @var string
+     */
+    public $beian;
+
+    /**
      * 返回标识
      */
     public function formName()
@@ -86,7 +96,8 @@ class Settings extends Model
             'close' => 'boolean',
             'closeReason' => 'string',
             'analysisCode' => 'string',
-
+            'icpbeian' => 'string',
+            'beian' => 'string',
         ];
     }
 
@@ -97,7 +108,7 @@ class Settings extends Model
     {
         return [
             [['name', 'title', 'keywords', 'description', 'copyright', 'baseUrl'], 'required'],
-            [['name', 'title', 'keywords', 'description', 'copyright', 'closeReason', 'analysisCode'], 'string'],
+            [['name', 'title', 'keywords', 'description', 'copyright', 'closeReason', 'analysisCode', 'icpBeian', 'beian'], 'string'],
             ['close', 'boolean'],
             ['close', 'default', 'value' => false],
             ['baseUrl', 'url']
@@ -119,6 +130,8 @@ class Settings extends Model
             'close' => Yii::t('admin', 'Site Close'),
             'closeReason' => Yii::t('admin', 'Site Close Reason'),
             'analysisCode' => Yii::t('admin', 'Site Analysis Code'),
+            'icpBeian' => Yii::t('admin', 'ICP Beian'),
+            'beian' => Yii::t('admin', 'Beian'),
         ];
     }
 }

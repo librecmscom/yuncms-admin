@@ -19,6 +19,8 @@
 return [
     'Auth Key' => '',
     'ID' => '',
+    'ICP Beian'=>'ICP备案号',
+    'Beian'=>'公安备案号',
     'Account' => '账户',
     'Active' => '活动',
     'Add' => '添加',
