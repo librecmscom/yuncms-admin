@@ -33,6 +33,6 @@ class IconpIckerAsset extends AssetBundle
     public $depends = [
         'yii\web\JqueryAsset',
         'yii\bootstrap\BootstrapAsset',
-        'xutl\fontawesome\Asset',
+        'yiilab\fontawesome\FontAwesomeAsset',
     ];
 }
